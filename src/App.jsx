@@ -5,7 +5,7 @@ import Internships from './components/Internships';
 import TestTerminals from './components/TestTerminals';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('dashboard');
+  const [activeSection, setActiveSection] = useState('internships');
   const [testimonials, setTestimonials] = useState([
     {
       id: 1,
@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <div className="flex-1 ml-64">
+      <div className="flex-1 lg:ml-64 w-full overflow-x-hidden">
         {renderContent()}
       </div>
     </div>
